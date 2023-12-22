@@ -35,8 +35,17 @@ func extractEmails(stdout []byte) []string {
 	return emails
 }
 
-func selectAccount() error {
+func execGcloudAuthList() ([]byte, error) {
 	list, err := exec.Command("gcloud", "auth", "list").Output()
+	if err != nil {
+		return nil, err
+	}
+
+	return list, nil
+}
+
+func selectAccount() error {
+	list, err := execGcloudAuthList()
 	if err != nil {
 		return err
 	}
@@ -67,7 +76,7 @@ func selectAccount() error {
 }
 
 func printAccountList() error {
-	list, err := exec.Command("gcloud", "auth", "list").Output()
+	list, err := execGcloudAuthList()
 	if err != nil {
 		return err
 	}
