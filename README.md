@@ -1,8 +1,26 @@
 # gcloud-activate
 
+![](./screenshot.png)
+
 Alias of gcloud cli
 
-## Account
+## Install
+
+```shell
+go install github.com/konojunya/gcloud-activate@latest
+```
+
+## Usage
+
+You can add completions
+
+```shell
+gcloud-activate completion
+```
+
+Supports zsh, fish, powershell and bash.
+
+### Account
 
 ```shell
 $ gcloud-activate account // select account
@@ -10,7 +28,7 @@ or
 $ gcloud-activate account --list // print accounts
 ```
 
-## Project
+### Project
 
 ```shell
 $ gcloud-activate project // select project
