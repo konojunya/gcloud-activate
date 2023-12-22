@@ -20,18 +20,24 @@ gcloud-activate completion
 
 Supports zsh, fish, powershell and bash.
 
+### Info
+
+```shell
+gcloud-activate
+```
+
 ### Account
 
 ```shell
-$ gcloud-activate account // select account
+gcloud-activate account // select account
 or
-$ gcloud-activate account --list // print accounts
+gcloud-activate account --list // print accounts
 ```
 
 ### Project
 
 ```shell
-$ gcloud-activate project // select project
+gcloud-activate project // select project
 or
-$ gcloud-activate project --list // print projects
+gcloud-activate project --list // print projects
 ```
